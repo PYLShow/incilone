@@ -1,1 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Order of the Veil</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at center, #111 0%, #000 70%);
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 4rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    animation: fadeIn 3s ease-in-out;
+}
+
+header p {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    color: #aaa;
+}
+
+.glow {
+    color: white;
+    text-shadow: 0 0 10px white, 0 0 20px #aaa;
+}
+
+section {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+section h2 {
+    font-family: 'Cinzel', serif;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+section p {
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.8;
+    color: #ccc;
+}
+
+.symbol {
+    margin: 60px auto;
+    width: 200px;
+    filter: invert(1);
+    opacity: 0.8;
+}
+
+button {
+    margin-top: 40px;
+    padding: 15px 40px;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: white;
+    color: black;
+}
+
+footer {
+    padding: 40px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #555;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1 class="glow">Learn The Truth</h1>
+    <p>The world is not what they told you.</p>
+</header>
+
+<section>
+    <img src="your-symbol.png" class="symbol">
+    <h2>Who We Are</h2>
+    <p>
+        We are The Order of the Veil.  
+        For centuries, we have studied the hidden patterns beneath reality.  
+        While others sleep, we observe.  
+        While others follow, we awaken.
+    </p>
+</section>
+
+<section>
+    <h2>The Awakening</h2>
+    <p>
+        There is a frequency within the human mind that has been suppressed.  
+        A layer of truth buried under distraction and fear.  
+        Once you see it, you cannot unsee it.
+        Once you understand, you cannot return.
+    </p>
+    <button onclick="revealTruth()">ENTER THE INNER CIRCLE</button>
+</section>
+
+<section id="hiddenMessage" style="display:none;">
+    <h2>You Have Chosen</h2>
+    <p>
+        The first step is awareness.  
+        The second step is silence.  
+        The final step… will be revealed.
+    </p>
+</section>
+
+<footer>
+    © 2026 The Order of the Veil | This is a fictional creative project.
+</footer>
+
+<script>
+function revealTruth() {
+    document.getElementById("hiddenMessage").style.display = "block";
+    window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: "smooth"
+    });
+}
+</script>
+
+</body>
+</html>
